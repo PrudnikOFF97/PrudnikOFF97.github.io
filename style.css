@@ -180,19 +180,26 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 20px;
 }
 .par_art>p{
+    position: absolute;
+    top: 0px;
+    left: 95px;
     font-size: 24px;
     font-weight: 700;
     color: #353854;
-    padding-left: 80px;
-    padding-top: 20px;
 }
 .par_art>article{
     font-size: 16px;
     color: #999999;
+    margin: 20px;
 }
 .usability>img{
     padding-top: 5px;
+}
+.usability,
+.paralax,
+.colors{
+    position: relative;
+    margin: 50px;
 }
