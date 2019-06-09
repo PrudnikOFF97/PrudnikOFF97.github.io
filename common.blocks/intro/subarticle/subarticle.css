@@ -1,13 +1,6 @@
 .subarticle{
     font-size: 18px;
 }
-.subarticle__buttons{
-    position: relative;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 @media (min-width: 1061px){
     .subarticle{
         grid-column: 1;
