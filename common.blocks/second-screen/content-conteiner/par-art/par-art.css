@@ -1,0 +1,17 @@
+.par-art__p{
+    position: absolute;
+    top: 0px;
+    left: 95px;
+
+    margin-bottom: 0;
+
+    font-size: 24px;
+    font-weight: 700;
+    color: #353854;
+}
+.par-art__article{
+    margin: 20px;
+
+    font-size: 16px;
+    color: #999999;
+}

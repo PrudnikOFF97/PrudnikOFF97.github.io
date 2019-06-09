@@ -1,0 +1,36 @@
+.subarticle{
+    font-size: 18px;
+}
+.subarticle__buttons{
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@media (min-width: 1061px){
+    .subarticle{
+        grid-column: 1;
+        grid-row: 2/3;
+    }
+}
+@media (max-width: 615px){
+    .subarticle{
+        grid-row: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media (max-width: 1060px){
+    .subarticle{
+        grid-row: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 5%;
+    }
+    .subarticle__article{
+        text-align: center;
+    }    
+}

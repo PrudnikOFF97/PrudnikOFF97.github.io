@@ -1,0 +1,95 @@
+.phone{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.phone__img{
+    position: relative;
+    width: 200px;
+    height: 420px;
+}
+@media (min-width: 1061px){
+    .phone{
+        grid-column: 2;
+        grid-row: 1/3;
+    }
+}
+@media (max-width: 1060px){
+    .phone{
+        grid-row: 2;
+    }
+}
+.phone__circle{
+    position: absolute;
+    z-index: 100;
+    
+    display: flex;
+    width: 12%;
+    min-width: 70px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 90%;
+
+    border-radius: 50%; 
+    animation-duration: 2.5s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;  
+}
+.phone__circle::before{
+    content: "";
+    padding-top: 100%;
+    float: left;
+}
+.phone__circle_orange{
+    top: 13rem;
+    left: 5%;
+
+    background-color: #fc6a42;
+    animation-delay: .8s;
+}
+.phone__circle_blue{
+    top: 6rem;
+    right: 9%;
+
+    background-color: #4466c9;
+}
+.phone__circle_yellow{
+    top: 350px;
+    left: 80px;
+
+    width: 8%;
+    min-width: 50px;
+
+    background-color: #fcec64;
+
+    animation-delay: .2s;
+}
+.phone__circle_white{
+    top: 20px;
+    right: 20%;
+
+    width: 5%;
+    min-width: 50px;
+    
+    color: #6ca3ff;
+
+    background-color: #fff;
+
+    animation-delay: .5s;
+}   
+@keyframes slidein {
+    from {
+      margin-top: 0%;
+    }
+    50%{
+        margin-top: 5%;
+    }
+  
+    to {
+      margin-top: 0%;
+    }
+  }

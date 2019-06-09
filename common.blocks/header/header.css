@@ -1,0 +1,29 @@
+.header{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    padding: 10px 5%;
+    width: 100%;
+
+    background-color: #648cff;
+}
+.header__conteiner{
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.header__inner{
+    display: flex;
+
+    justify-content: space-between;
+    align-content: center;
+}
+.header__logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}

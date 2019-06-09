@@ -1,0 +1,8 @@
+.content-conteiner{
+    position: relative;
+    
+    margin: 50px;
+}
+.content-conteiner__img_lower{
+    padding-top: 5px;
+}
