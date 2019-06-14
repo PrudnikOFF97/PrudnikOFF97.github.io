@@ -6,21 +6,15 @@
     right: 0;
     z-index: 1000;
 
+    display: flex;
     padding: 10px 5%;
-    width: 100%;
-
-    background-color: #648cff;
-}
-.header__conteiner{
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-}
-.header__inner{
-    display: flex;
-
     justify-content: space-between;
     align-content: center;
+
+    background-color: #648cff;
 }
 .header__logo{
     font-size: 30px;

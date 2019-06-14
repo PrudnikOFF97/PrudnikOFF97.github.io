@@ -1,8 +1,6 @@
 .intro{
-    width: 100%;
-}
-.intro__conteiner{
     display: grid;
+    width: 100%;
     grid-gap: 40px;
     padding: 80px 5%;
     padding-bottom: 5%;
@@ -16,7 +14,7 @@
     font-weight: 700;
 }
 @media (min-width: 1061px){
-    .intro__conteiner{
+    .intro{
         grid-template-columns: 1fr 1fr;
     }
     .intro__article{
@@ -25,12 +23,12 @@
     }
 }
 @media (max-width: 615px){
-    .intro__conteiner{
+    .intro{
         background-size: 100vw 115%;
     }
 }
 @media (max-width: 1060px){
-    .intro__conteiner{
+    .intro{
         grid-template-columns: 1fr;
     }
     .intro__article{
