@@ -2,7 +2,7 @@
     .burger{
         right: 5%;
         position: absolute;
-        z-index: 100000000;
+        z-index: 50;
     
         display: flex;
         height: 50px;
@@ -19,6 +19,7 @@
     .burger__span::after{
         width: 20px;
         height: 2px;
+        z-index: 50;
     
         background-color: #fff;
         transition: 0.2s;
@@ -37,6 +38,44 @@
     .burger__span::after{
         transform: translateY(5px);
     }
+    .burger__nav{
+        position: fixed;
+        right: -100%;
+        z-index: 20;
+        transform: translateY(45%);
+
+        display: flex;
+        flex-flow: column;
+        height: 100vh;
+        padding-top: 50px;
+
+        cursor: default;
+        background-color: #fc6a42;
+        transition: 0.5s;
+    }
+    .burger__nav__link{
+        padding: 20px;
+
+        font-size: 22px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #fff;
+    }
+    .burger__overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        display: none;
+        width: 100vw;
+        height: 100vh;
+
+        cursor: default;
+        background-color: rgba(0, 0, 0, 0);
+        transition: 0.9s;
+    }
     .burger-active>.burger__span::before{
         transform: rotate(-45deg);
     }
@@ -45,5 +84,13 @@
     }
     .burger-active>.burger__span{
         height: 0px;
+    }
+    .burger-active>.burger__nav{
+        right: 0;
+    }
+    .burger-active>.burger__overlay{
+        display: block;
+        
+        background-color: rgba(0, 0, 0, 0.5)
     }
 }
