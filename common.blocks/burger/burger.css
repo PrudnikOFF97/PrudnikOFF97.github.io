@@ -1,3 +1,8 @@
+@media (min-width: 870px){
+    .burger{
+        display: none;
+    }
+}
 @media (max-width: 869px){
     .burger{
         right: 5%;
