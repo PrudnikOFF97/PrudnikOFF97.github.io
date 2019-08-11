@@ -1,0 +1,42 @@
+.reviews{
+    padding: 80px 5%;
+    padding-bottom: 5%;
+}
+.reviews__opening-quote{
+    text-align: left;
+    font-weight: 700;
+    font-size: 141px;
+    color: #648cff;
+}
+.reviews__closing-quote{
+    text-align: right;
+    font-weight: 700;
+    font-size: 141px;
+    color: #648cff;
+}
+.reviews__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+}
+.reviews__review-text{
+    text-align: left;
+    font-size: 24px;
+    color: #999999
+}
+.reviews__review-author{
+    text-align: left;
+    font-size: 18px;
+    color: #999999
+}
+@media (min-width: 1061px){
+    .reviews__container{
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 80px;    
+    }
+}
+@media (max-width: 1060px){
+    .reviews__container{
+        grid-template-columns: 1fr;
+    }
+}

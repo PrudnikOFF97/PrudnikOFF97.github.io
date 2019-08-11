@@ -13,11 +13,26 @@
         grid-column: 2;
         grid-row: 1/3;
     }
+    .phone_left{
+        grid-column: 1;
+        grid-row: 1/6;
+    }
+    .phone_right{
+        grid-column: 2;
+        grid-row: 1/6;
+    }
 }
 @media (max-width: 1060px){
     .phone{
         grid-row: 2;
     }
+    .phone_left{
+        grid-row: 3;
+    }
+    .phone_right{
+        grid-row: 3;
+    }
+
 }
 .phone__circle{
     position: absolute;

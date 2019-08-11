@@ -14,11 +14,15 @@
         <link rel="stylesheet" href="common.blocks/subarticle/subarticle.css">
         <link rel="stylesheet" href="common.blocks/phone/phone.css">
         <link rel="stylesheet" href="common.blocks/button-holder/button-holder.css">
+        <link rel="stylesheet" href="common.blocks/block-header/block-header.css">
         <link rel="stylesheet" href="common.blocks/features/features.css">
         <link rel="stylesheet" href="common.blocks/content-conteiner/content-container.css">
         <link rel="stylesheet" href="common.blocks/par-art/par-art.css">
         <link rel="stylesheet" href="common.blocks/widgets/widgets.css">
         <script src="common.blocks/widgets/widgets.js"></script>
+        <link rel="stylesheet" href="common.blocks/screenshots/screenshots.css">
+        <link rel="stylesheet" href="common.blocks/screenshot-container/screenshot-container.css">
+        <link rel="stylesheet" href="common.blocks/reviews/reviews.css">     
 
     </head>
     <body>
@@ -29,15 +33,15 @@
                 <div class="burger__nav">
                     <a href="#intro" class="burger__nav__link">Home</a>
                     <a href="#features" class="burger__nav__link">Features</a>
-                    <a href="#" class="burger__nav__link">Reviews</a>
+                    <a href="#reviews" class="burger__nav__link">Reviews</a>
                     <a href="#" class="burger__nav__link">Download</a>
                 </div>
                 <div class="burger__overlay"></div>
             </div>
             <nav class="nav">
-                <a class="nav__link" href="#">Home</a>
-                <a class="nav__link" href="#">Features</a>
-                <a class="nav__link" href="#">Reviews</a>
+                <a class="nav__link" href="#intro">Home</a>
+                <a class="nav__link" href="#features">Features</a>
+                <a class="nav__link" href="#reviews">Reviews</a>
                 <a class="nav__link" href="#">Download</a>
                 <a class="nav__link inst" href="#"><img src="https://img.icons8.com/metro/22/e1e1e1/instagram-new.png"></a>
                 <a class="nav__link twitt" href="#"><img src="https://img.icons8.com/metro/22/e1e1e1/twitter.png"></a>
@@ -61,8 +65,8 @@
             </div>
         </div>
         <div class="features" id="features">
-            <article class="features__title">Perfect Features</article>
-            <article class="features__subtitle">Only necessary</article>
+            <article class="block-header__title">Perfect Features</article>
+            <article class="block-header__subtitle">Only necessary</article>
             <div class="features__container">
                 <div class="content-conteiner">
                     <img class="content-conteiner__img content-conteiner__img_lower" src=img/usability.png>
@@ -88,13 +92,83 @@
             </div>
         </div>
         <div class="widgets">
-            <article class="widgets__title">Simple widgets</article>
-            <article class="widgets__subtitle">Drag and Drop</article>
+            <article class="block-header__title">Simple widgets</article>
+            <article class="block-header__subtitle">Drag and Drop</article>
             <img class="widgets__arrow widgets__arrow_left" src="img/left arrow.png" alt="">
             <img class="widgets__img" src="img/image left.png" alt="">
             <img class="widgets__img" src="img/image center.png" alt="">
             <img class="widgets__img" src="img/image right.png" alt="">
             <img class="widgets__arrow widgets__arrow_right" src="img/right arrow.png" alt="">
+        </div>
+        <div class="screenshots">
+            <div class="block-header__title">screenshots</div>
+            <div class="block-header__subtitle">The brightest images</div>
+            <div class="screenshot-container">
+                <div class="phone phone_left">
+                    <img src="img/SCREEN.png" alt="" class="phone__img">
+                    <div class="phone__circle phone__circle_yellow">15˚</div>
+                    <div class="phone__circle phone__circle_blue">Cloudy</div>
+                </div>
+                <div class="screenshot-container__icon">
+                    <img src="img/cloud-icon.png" alt="">
+                </div>
+                <article class="screenshot-container__title">When the clouds</article>
+                <article class="screenshot-container__subtitle">Variable information on the air humidity, the feeling of the weather, and the ability to share this with your friends</article>
+            </div>
+            <div class="screenshot-container">
+                <div class="phone phone_right">
+                    <img src="img/SCREEN copy 2.png" alt="" class="phone__img">
+                    <div class="phone__circle phone__circle_yellow">35˚</div>
+                    <div class="phone__circle phone__circle_orange">Sunny</div>
+                </div>
+                <div class="screenshot-container__icon">
+                    <img src="img/sunny-icon.png" alt="">
+                </div>
+                <article class="screenshot-container__title">When the sun</article>
+                <article class="screenshot-container__subtitle">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life. Sometimes the simplest things are the hardest to find. So we created a new line for everyday life.</article>
+            </div>
+            <div class="screenshot-container">
+                <div class="phone phone_left">
+                    <img src="img/SCREEN3.png" alt="" class="phone__img">
+                    <div class="phone__circle phone__circle_white">9˚</div>
+                    <div class="phone__circle phone__circle_blue">Rainy</div>
+                </div>
+                <div class="screenshot-container__icon">
+                    <img src="img/rainy-icon.png" alt="">
+                </div>
+                <article class="screenshot-container__title">When the rain</article>
+                <article class="screenshot-container__subtitle">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life. Sometimes the simplest things are the hardest to find. So we created a new line for everyday life. Sometimes the simplest things are the hardest to find.</article>
+            </div>
+        </div>
+        <div class="reviews" id="reviews">
+            <article class="block-header__title">What people are saying</article>
+            <article class="block-header__subtitle">Reviews</article>
+            <div class="reviews__container">
+                <div class="reviews__review-block">
+                    <article class="reviews__opening-quote">“</article>
+                    <article class="reviews__review-text">What art offers is space - a certain breathing room for the spirit.</article>
+                    <article class="reviews__review-author">John Updike</article>
+                    <article class="reviews__closing-quote">“</article>
+                </div>
+                <div class="reviews__review-block">
+                    <article class="reviews__opening-quote">“</article>
+                    <article class="reviews__review-text">We do not see nature with our eyes, but with our understandings and our hearts.</article>
+                    <article class="reviews__review-author">William Hazlitt</article>
+                    <article class="reviews__closing-quote">“</article>
+                </div>
+                <div class="reviews__review-block">
+                    <article class="reviews__opening-quote">“</article>
+                    <article class="reviews__review-text">The only courage that matters is the kind that gets you from one moment to the next.</article>
+                    <article class="reviews__review-author">Mignon McLaughlin</article>
+                    <article class="reviews__closing-quote">“</article>
+                </div>
+                <div class="reviews__review-block">
+                    <article class="reviews__opening-quote">“</article>
+                    <article class="reviews__review-text">No man has a good enough memory to be a successful liar. </article>
+                    <article class="reviews__review-author">Abraham Lincoln</article>
+                    <article class="reviews__closing-quote">“</article>
+                </div>
+            </div>
         </div>
     </body>
 </html>
