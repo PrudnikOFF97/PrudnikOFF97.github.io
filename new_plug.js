@@ -5880,7 +5880,7 @@
         var balanser_timer;
         var images = [];
         var balansers = Modss.balansers();
-        var isVipBal = 100; //(Lampa.Storage.get('pro_pub', false) ? 5 : 5);
+        var isVipBal = 4; //(Lampa.Storage.get('pro_pub', false) ? 5 : 5);
 
         var filter_sources = Lampa.Arrays.getKeys(balansers);
         var filter_translate = {
@@ -5930,7 +5930,7 @@
                 } else if (type == "sort") {
                     Lampa.Select.close();
                     if (
-                        Lampa.Arrays.getKeys(sources).indexOf(a.source) !== -1
+                        true
                     ) {
                         if (
                             !Lampa.Storage.get("pro_pub", "false") &&
