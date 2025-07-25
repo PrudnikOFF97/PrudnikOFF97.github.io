@@ -422,32 +422,32 @@
                                 "<div style='position: absolute;left: 1em;bottom: 1em;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);padding: 0.1em 0.2em;font-size: 0.6em;border-radius: 0.5em;font-weight: 900;text-transform: uppercase;'>VIP</div>"
                         );
                 })
-                .catch(function (e) {
-                    var Noty = function Noty(e) {
-                        Lampa.Noty.show(
-                            e &&
-                                (e.vip
-                                    ? e.vip.title + '<br>' + e.vip.msg
-                                    : e.error
-                                    ? 'Ошибка: ' + e.error
-                                    : 'Ничего не найдено')
-                        );
-                    };
-                    _this.btn.unbind('hover:enter hover.click').on('hover:enter hover.click', function () {
-                        Noty(e);
-                    });
-                    Noty(e);
-                    Lampa.Activity.active()
-                        .activity.render()
-                        .find('.view--modss_online')
-                        .css('opacity', '0.3')
-                        .html(
-                            Lampa.Lang.translate(ico + '<span>' + _this.title + '</span>') +
-                                "<div style='position: absolute;left: 1em;bottom: 1em;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);padding: 0.1em 0.2em;font-size: 0.6em;border-radius: 0.5em;font-weight: 900;text-transform: uppercase;'>VIP</div>"
-                        );
-                    timer.stop();
-                    console.log('Modss', 'Loader is:', e);
-                });
+                // .catch(function (e) {
+                //     var Noty = function Noty(e) {
+                //         Lampa.Noty.show(
+                //             e &&
+                //                 (e.vip
+                //                     ? e.vip.title + '<br>' + e.vip.msg
+                //                     : e.error
+                //                     ? 'Ошибка: ' + e.error
+                //                     : 'Ничего не найдено')
+                //         );
+                //     };
+                //     _this.btn.unbind('hover:enter hover.click').on('hover:enter hover.click', function () {
+                //         Noty(e);
+                //     });
+                //     Noty(e);
+                //     Lampa.Activity.active()
+                //         .activity.render()
+                //         .find('.view--modss_online')
+                //         .css('opacity', '0.3')
+                //         .html(
+                //             Lampa.Lang.translate(ico + '<span>' + _this.title + '</span>') +
+                //                 "<div style='position: absolute;left: 1em;bottom: 1em;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);padding: 0.1em 0.2em;font-size: 0.6em;border-radius: 0.5em;font-weight: 900;text-transform: uppercase;'>VIP</div>"
+                //         );
+                //     timer.stop();
+                //     console.log('Modss', 'Loader is:', e);
+                // });
         },
         collections: function () {
             var menu_item = $(
