@@ -7943,6 +7943,7 @@
         };
         this.back = function () {
             Lampa.Activity.backward();
+        };
         this.pause = function () {};
         this.stop = function () {};
         this.destroy = function () {
