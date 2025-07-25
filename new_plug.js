@@ -835,23 +835,23 @@
                         function (json) {
                             if (!json.success) window.location.reload();
                             var auth = json.auth;
-                            logged = auth;
+                            logged = true;
 
                             console.log('Modss', 'auth', auth);
 
                             if (auth === true || (auth === 'true' && json.stop_auth === true)) {
-                                if (json.block && json.stop_auth) {
-                                    logged = false;
-                                    Lampa.Account.logoff({ email: Lampa.Storage.get('account_email') });
-                                }
-                                stopAuthInterval();
-                                window.location.reload();
+                                // if (json.block && json.stop_auth) {
+                                //     logged = false;
+                                //     Lampa.Account.logoff({ email: Lampa.Storage.get('account_email') });
+                                // }
+                                // stopAuthInterval();
+                                // window.location.reload();
                             } else if (json.stop_auth === true) {
-                                if (json.block) {
-                                    logged = false;
-                                    Lampa.Account.logoff({ email: Lampa.Storage.get('account_email') });
-                                }
-                                stopAuthInterval();
+                                // if (json.block) {
+                                //     logged = false;
+                                //     Lampa.Account.logoff({ email: Lampa.Storage.get('account_email') });
+                                // }
+                                // stopAuthInterval();
                             }
                             resolve(json);
                         },
