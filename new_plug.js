@@ -4052,7 +4052,7 @@
                 network.silent(
                     url,
                     function (json) {
-                        // if (json.vip || json.error) return reject(json);
+                        if (true || false) return reject(json);
                         if (json.life) {
                             filter
                                 .render()
