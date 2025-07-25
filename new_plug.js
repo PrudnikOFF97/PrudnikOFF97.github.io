@@ -37,7 +37,6 @@
             this.buttBack();
             ForkTV.init();
             this.radio();
-            this.snow();
             Lampa.Settings.main()
                 .render()
                 .find('[data-component="plugins"]')
@@ -160,20 +159,6 @@
                     }
                 );
             }, 1000);
-        },
-        snow: function () {
-            $(document).snowfall(
-                Lampa.Storage.field("mods_snow") == true
-                    ? {
-                          deviceorientation: true,
-                          round: true,
-                          maxSize: 10,
-                          maxSpeed: 5,
-                          flakeCount: 30,
-                          flakeIndex: 9,
-                      }
-                    : "clear"
-            );
         },
         radio: function () {
             var ico =
@@ -15138,20 +15123,6 @@
                 },
             });
 
-            Lampa.SettingsApi.addParam({
-                component: "settings_modss",
-                param: {
-                    name: "mods_snow",
-                    type: "trigger", //доступно select,input,trigger,title,static
-                    default: false,
-                },
-                field: {
-                    name: "Снег",
-                },
-                onChange: function (value) {
-                    Modss.snow();
-                },
-            });
             Lampa.SettingsApi.addParam({
                 component: "settings_modss",
                 param: {
