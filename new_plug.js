@@ -813,6 +813,7 @@
                 Pub.network.silent(
                     API + "KPrating",
                     function (json) {
+                        vip = true;
                         if (
                             card &&
                             !card.kinopoisk_id &&
@@ -7731,6 +7732,7 @@
             this.loading(false);
         };
         this.empty = function (er) {
+            console.log(er);
             var html = Lampa.Template.get("modss_does_not_answer", {});
             html.find(".online-empty__buttons").remove();
             html.find(".online-empty__title").text(
@@ -7748,7 +7750,7 @@
             scroll.append(html);
             this.loading(false);
             var balanser = files.render().find(".filter--sort");
-            Navigator.focus(balanser[0]);
+            // Navigator.focus(balanser[0]);
         };
         this.doesNotAnswer = function (query) {
             var _this6 = this;
