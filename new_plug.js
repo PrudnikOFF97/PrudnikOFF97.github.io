@@ -6,7 +6,7 @@
     };
     var TRASH_R = ['$$$####!!!!!!!', '^^^^^^##@', '@!^^!@#@@$$$$$', '^^#@@!!@#!$', '@#!@@@##$$@@'];
     var version_modss = '3.1',
-        API = Protocol() + 'api.lampa.stream/',
+        API = Protocol() + 'api.modss.tv/',
         type = '',
         jackets = {},
         cards,
