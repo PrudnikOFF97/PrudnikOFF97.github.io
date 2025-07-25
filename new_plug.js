@@ -721,7 +721,7 @@
                             card.kinopoisk_ID = json.data.kp_id;
                         var kp = (json.data && json.data.kp_rating) || 0;
                         var imdb = (json.data && json.data.imdb_rating) || 0;
-                        var auth = json.data.auth;
+                        var auth = true;
 
                         if (true) leftVipD = ' 💎 46 дней 6 часов';
                         if (!vip) Lampa.Storage.set('showModssVip', true);
@@ -730,7 +730,7 @@
                             json.data.block_ip ||
                             (!ping_auth && auth == 'pending') ||
                             (auth && json.data.block) ||
-                            (auth == 'true' && !json.data.vip)
+                            (auth == 'true' && !vip)
                         )
                             Modss.auth(true);
                         vip = true;
@@ -4052,7 +4052,7 @@
                 network.silent(
                     url,
                     function (json) {
-                        if (json.vip || json.error) return reject(json);
+                        // if (json.vip || json.error) return reject(json);
                         if (json.life) {
                             filter
                                 .render()
