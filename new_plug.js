@@ -6901,7 +6901,7 @@
                         title: vip ? balansers[e] : balansers[e].split(" ")[0],
                         source: e,
                         selected: e == balanser,
-                        ghost: vip,
+                        ghost: false,
                     };
                     if (vip) {
                         tpl.template = "selectbox_icon";
