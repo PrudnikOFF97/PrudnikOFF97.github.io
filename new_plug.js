@@ -5880,7 +5880,7 @@
         var balanser_timer;
         var images = [];
         var balansers = Modss.balansers();
-        var isVipBal = 4; //(Lampa.Storage.get('pro_pub', false) ? 5 : 5);
+        var isVipBal = 100; //(Lampa.Storage.get('pro_pub', false) ? 5 : 5);
 
         var filter_sources = Lampa.Arrays.getKeys(balansers);
         var filter_translate = {
