@@ -5915,6 +5915,9 @@
                     clearInterval(balanser_timer);
                 });
             filter.onSelect = function (type, a, b) {
+                console.log(a);
+                console.log(type);
+                console.log(b);
                 if (a.bal) {
                     filter
                         .render()
