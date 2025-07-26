@@ -4047,7 +4047,7 @@
         this.createSource = function (load) {
             var _this3 = this;
             return new Promise(function (resolve, reject) {
-                var url = _this3.requestParams(API + 'eventss/' + object.movie.id + '?');
+                var url = _this3.requestParams(API + 'events/' + object.movie.id + '?');
                 network.timeout(15000);
                 network.silent(
                     url,
