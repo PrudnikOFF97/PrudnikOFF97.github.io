@@ -21,6 +21,9 @@
         menu_list = [],
         vip = true,
         leftVipD = " 💎 46 дней 6 часов",
+        
+        // Set pro_pub to true to simulate VIP access
+        _ = Lampa.Storage.set("pro_pub", true),
         user_id = 314152559,
         uid = "dcbee9ef84465be64feb69380_314152559",
         IP = "151.249.234.70",
@@ -5916,10 +5919,9 @@
                     clearInterval(balanser_timer);
                 });
             filter.onSelect = function (type, a, b) {
-                console.log(a);
-                console.log(type);
-                console.log(b);
+                console.log('Filter onSelect called with:', type, a, b);
                 if (a.bal) {
+                    console.log('Balancer selection detected:', a.bal);
                     filter
                         .render()
                         .find(".filter--sort")
@@ -5995,6 +5997,7 @@
             this.search();
         };
         this.changeBalanser = function (balanser_name) {
+            console.log('changeBalanser called with:', balanser_name);
             var last_select_balanser = Lampa.Storage.cache(
                 "online_last_balanser",
                 3000,
@@ -6002,6 +6005,7 @@
             );
             last_select_balanser[object.movie.id] = balanser_name;
             Lampa.Storage.set("online_last_balanser", last_select_balanser);
+            console.log('Saved balancer selection:', balanser_name);
             var to = this.getChoice(balanser_name);
             var from = this.getChoice();
             if (from.voice_name) to.voice_name = from.voice_name;
@@ -6022,13 +6026,29 @@
             );
             if (last_select_balanser[object.movie.id]) {
                 balanser = last_select_balanser[object.movie.id];
+                console.log('Using saved balancer:', balanser);
                 Lampa.Storage.set("online_last_balanser", last_select_balanser);
-            } else balanser = priority_balanser;
+            } else {
+                balanser = priority_balanser;
+                console.log('Using priority balancer:', balanser);
+            }
 
-            if (!sources[balanser]) balanser = priority_balanser;
+            if (!sources[balanser]) {
+                console.log('Invalid balancer, falling back to priority:', balanser);
+                balanser = priority_balanser;
+            }
 
-            if (balanser == "undefined") balanser = priority_balanser;
-            if (!sources[balanser]) balanser = Lampa.Arrays.getKeys(sources)[0];
+            if (balanser == "undefined") {
+                console.log('Undefined balancer, falling back to priority');
+                balanser = priority_balanser;
+            }
+            
+            if (!sources[balanser]) {
+                console.log('Still invalid balancer, falling back to first in list');
+                balanser = Lampa.Arrays.getKeys(sources)[0];
+            }
+            
+            console.log('Final balancer selected:', balanser);
             return new sources[balanser](this, object);
         };
         this.proxy = function (name) {
@@ -6898,12 +6918,14 @@
                 "sort",
                 filter_sources.map(function (e, i) {
                     var vip = i >= isVipBal ? true : false;
+                    console.log('Mapping balancer:', e, 'index:', i, 'isVIP:', vip);
                     var tpl = {
                         title: vip ? balansers[e] : balansers[e].split(" ")[0],
                         source: e,
                         selected: e == balanser,
-                        ghost: false,
+                        ghost: false, // Set ghost to false for all balancers to allow selection
                     };
+                    console.log('Balancer template:', tpl);
                     if (false) {
                         tpl.template = "selectbox_icon";
                         tpl.icon =
