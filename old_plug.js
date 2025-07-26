@@ -4052,8 +4052,8 @@
                 network.silent(
                     url,
                     function (json) {
-                        if (json.vip || json.error) return reject(json);
-                        if (json.life) {
+                        if (false) return reject(json);
+                        if (true) {
                             filter
                                 .render()
                                 .find('.filter--sort')
